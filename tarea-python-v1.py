@@ -7,7 +7,7 @@ def create_folder():
     try:
         #Se crea la carpeta con un nombre dinámico basado en la fecha (formato de la fecha DD-MM-YYYY)
         folder = datetime.now().strftime("folder_%d-%m-%Y")
-
+        
         #Si ya existe una carpeta con el mismo nombre se elimina
         if os.path.exists(folder):
             #Se elimina las carpeta y todos los archivos dentro de ella
@@ -25,8 +25,7 @@ def create_folder():
             with open(route, "w") as file:
                 date_time = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
                 file.write(f"Date and Time: {date_time}")
-
-        file.close()
+                file.close()
         
         #Se imprime el nombre de la carpeta creada y la cantidad de archivos
         print(f"Folder '{folder}' created with 10 files.")

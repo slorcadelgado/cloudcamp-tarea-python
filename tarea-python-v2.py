@@ -38,6 +38,7 @@ def create_folder():
             with open(route, "w") as file:
                 date_time = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
                 file.write(f"Date and Time: {date_time}")
+                file.close()
 
         print(f"Folder '{folder}' created with 10 files.")
 
